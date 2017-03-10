@@ -74,6 +74,7 @@ if ($xoopsModuleConfig['graphic_lib'] === 'IM') {
 $adminObject->addInfoBoxLine(_AM_EXTGALLERY_SERVER_CONF, _AM_EXTGALLERY_UPLOAD_MAX_FILESIZE . get_cfg_var('upload_max_filesize'));
 $adminObject->addInfoBoxLine(_AM_EXTGALLERY_SERVER_CONF, _AM_EXTGALLERY_POST_MAX_SIZE . get_cfg_var('post_max_size'));
 
+$adminObject = new ModuleAdmin(); 
 echo $adminObject->addNavigation(basename(__FILE__));
 echo $adminObject->renderIndex();
 

@@ -72,7 +72,8 @@ $adminmenu[] = array(
 $adminmenu[] = array(
     'title' => _MI_EXTGALLERY_EXTENSION,
     'link'  => 'admin/extension.php',
-    'icon'  => $pathModIcon32 . '/extension.png'
+    //'icon'  => $pathModIcon32 . '/extension.png'
+    'icon'  =>$pathIcon32 . '/extention.png'
 );
 
 $adminmenu[] = array(

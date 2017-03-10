@@ -33,7 +33,7 @@ xoops_load('XoopsRequest');
 $pathIcon16           = $GLOBALS['xoops']->url('www/' . $GLOBALS['xoopsModule']->getInfo('systemIcons16'));
 $pathIcon32           = $GLOBALS['xoops']->url('www/' . $GLOBALS['xoopsModule']->getInfo('systemIcons32'));
 $xoopsModuleAdminPath = $GLOBALS['xoops']->path('www/' . $GLOBALS['xoopsModule']->getInfo('dirmoduleadmin'));
-require_once $xoopsModuleAdminPath . '/moduleadmin.php';
+require_once $xoopsModuleAdminPath . 'Frameworks/moduleclasses/moduleadmin/moduleadmin.php';
 
 $myts = MyTextSanitizer::getInstance();
 

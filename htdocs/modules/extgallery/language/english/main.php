@@ -3,7 +3,7 @@
 define('_MD_EXTGALLERY_CATEGORIESALBUMS', 'Categories / Albums');
 define('_MD_EXTGALLERY_ALBUMS', 'Albums');
 define('_MD_EXTGALLERY_NBALBUMS', '# Albums');
-define('_MD_EXTGALLERY_NBPHOTOS', '# Photos');
+define('_MD_EXTGALLERY_NBPHOTOS', 'Photos');
 define('_MD_EXTGALLERY_DESC', 'Description');
 define('_MD_EXTGALLERY_SEND_ECARD', 'Send an eCard');
 define('_MD_EXTGALLERY_EXTRA_INFO', 'Extra info');

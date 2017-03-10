@@ -45,6 +45,8 @@ $xoopsTpl->assign('lang', $lang);
 $xoopsTpl->assign('extgalleryName', $xoopsModule->getVar('name'));
 $xoopsTpl->assign('disp_cat_img', $xoopsModuleConfig['disp_cat_img']);
 $xoopsTpl->assign('display_type', $xoopsModuleConfig['display_type']);
+$xoopsTpl->assign('thumb_width', $xoopsModuleConfig['thumb_width']);
+$xoopsTpl->assign('thumb_heigth', $xoopsModuleConfig['thumb_heigth']);
 $xoopsTpl->assign('show_rss', $xoopsModuleConfig['show_rss']);
 
 // pk ------------------- add upload and view-my-album links to main page

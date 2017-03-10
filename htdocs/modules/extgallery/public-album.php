@@ -171,13 +171,14 @@ if ($jquery == 1 && $ajaxeffect !== 'none') {
             break;
 
         case 'tooltip':
-            $xoTheme->addScript('browse.php?modules/extgallery/assets/js/tooltip/image.tooltip.js');
-            $xoTheme->addStylesheet('browse.php?modules/extgallery/assets/js/tooltip/image.tooltip.css');
+            $xoTheme->addScript('modules/extgallery/assets/js/tooltip/image.tooltip.js');
+            $xoTheme->addStylesheet('modules/extgallery/assets/js/tooltip/image.tooltip.css');
             break;
 
         case 'overlay':
-            $xoTheme->addScript('browse.php?modules/extgallery/assets/js/overlay/overlay.jquery.tools.min.js');
-            $xoTheme->addStylesheet('browse.php?modules/extgallery/assets/js/overlay/overlay.css');
+            //$xoTheme->addScript('browse.php?modules/extgallery/assets/js/overlay/overlay.jquery.tools.min.js');
+            $xoTheme->addScript('modules/extgallery/assets/js/overlay/overlay.jquery.tools.min.js');
+            $xoTheme->addStylesheet('modules/extgallery/assets/js/overlay/overlay.css');
             break;
 
         case 'fancybox':
