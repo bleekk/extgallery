@@ -20,13 +20,13 @@
                 <{if $child.cat_isalbum}>
                   <div class="panel-thumbnail">
                     <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-<{$display_type}>.php?id=<{$child.cat_id}>">
-                        <img src="<{$child.cat_imgurl}>" alt="<{$child.cat_name}>">
+                        <img class="img-responsive" src="<{$child.cat_imgurl}>" alt="<{$child.cat_name}>">
                     </a>
                   </div>
                 <{else}>
                   <div class="panel-thumbnail">
                     <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-categories.php?id=<{$child.cat_id}>">
-                        <img src="<{$child.cat_imgurl}>" alt="<{$child.cat_name}>">
+                        <img class="img-responsive" src="<{$child.cat_imgurl}>" alt="<{$child.cat_name}>">
                     </a>
                   </div>
                 <{/if}>
@@ -36,13 +36,13 @@
                     <{if $child.cat_isalbum}>
                       <div class="panel-thumbnail">
                         <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-<{$display_type}>.php?id=<{$child.cat_id}>">
-                            <img src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$child.photo.photo_name}>" alt="<{$child.photo.photo_title}>">
+                            <img class="img-responsive" src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$child.photo.photo_name}>" alt="<{$child.photo.photo_title}>">
                         </a>
                       </div>
                     <{else}>
                       <div class="panel-thumbnail">
-                        <a title="<{$child.cat_name}>" href="pu<{$extgalleryName}>blic-categories.php?id=<{$child.cat_id}>">
-                            <img src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$child.photo.photo_name}>" alt="<{$child.photo.photo_title}>">
+                        <a title="<{$child.cat_name}>" href="public-categories.php?id=<{$child.cat_id}>">
+                            <img class="img-responsive" src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$child.photo.photo_name}>" alt="<{$child.photo.photo_title}>">
                         </a>
                       </div>
                     <{/if}>
@@ -60,7 +60,7 @@
                 <{else}>
                   <div class="panel-thumbnail">
                     <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-categories.php?id=<{$child.cat_id}>">
-                        <img src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$child.photo.photo_name}>" alt="<{$child.photo.photo_title}>">
+                        <img class="img-responsive" src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$child.photo.photo_name}>" alt="<{$child.photo.photo_title}>">
                     </a>
                   </div>
                 <{/if}>
@@ -72,7 +72,7 @@
             <h4>
             <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-<{$display_type}>.php?id=<{$child.cat_id}>">
                 <{$child.cat_name}></strong>
-            </a><span class="label label-success"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span></h4>
+            </a><span class="label label-success" style="font-size:60%; font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span></h4>
             <p><{$child.cat_desc}></p>
           </div>
 
@@ -81,7 +81,7 @@
             <h4>
             <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-categories.php?id=<{$child.cat_id}>">
                 <{$child.cat_name}>
-            </a><span class="label label-success"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span>
+            </a><span class="label label-success" style="font-size:60%; font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span>
             </h4>
             <p><{$child.cat_desc}></p>
           </div>

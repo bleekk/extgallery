@@ -133,9 +133,17 @@
     <{/if}>
 <{/if}>
 
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a></li>
+      <li><{$lang.albumName}></li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
 <div class="extgallery">
-    <a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a> <img
-            src="assets/images/breadcrumb-link.gif" alt="BreadCrumb"/> <{$lang.albumName}>
     <div class="center">
         <div class="bold"><{$extgallerySortbyOrderby}></div>
         <div class="margin-top10">
@@ -346,9 +354,13 @@
 
                         <!-- Photo Title -->
                         <{if $disp_ph_title == 1 }>
-                            <div class="photoTitle"><h2><a title="<{$photos[photo].photo_title}>"
-                                                           href="<{xoAppUrl modules/extgallery/}>public-userphoto.php?photoId=<{$photos[photo].photo_id}>"><{$photos[photo].photo_title}></a>
-                                </h2></div>
+                            <div class="photoTitle">
+                                <h4>
+                                    <a title="<{$photos[photo].photo_title}>" 
+                                        href="<{xoAppUrl modules/extgallery/}>public-userphoto.php?photoId=<{$photos[photo].photo_id}>">
+                                        <{$photos[photo].photo_title}>
+                                    </a>
+                                </h4></div>
                         <{/if}>
 
                         <!-- Start Hit count -->
@@ -427,6 +439,8 @@
     <{/if}>
 
     <{include file='db:system_notification_select.tpl'}>
+</div>
+    </div>
 </div>
 
 <{if $use_ajax_effects == overlay}>

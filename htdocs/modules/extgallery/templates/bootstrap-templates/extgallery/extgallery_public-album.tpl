@@ -33,14 +33,14 @@ $(function() {
 
     <div class="row">
         <div class="col-md-12 aligncenter">
-            <h3 class="gallerytitle"><{$extgallerySortbyOrderby}></h3>
+            <h4 class="gallerytitle"><{$extgallerySortbyOrderby}></h4>
         </div>
 
         <div class="col-md-12 aligncenter orderbyicons">
 
 
           <div class="btn-group btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-default">
+            <button type="button" class="btn btn-sm btn-default">
               <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&amp;start=<{$extgalleryStart}>&amp;sortby=photo_date&amp;orderby=DESC"
                  title="<{$smarty.const._MD_EXTGALLERY_SORTDATEDESC}>">
                   <span class="glyphicon glyphicon-chevron-up"></span>
@@ -51,7 +51,7 @@ $(function() {
                   <span class="glyphicon glyphicon-chevron-down"></span>
               </a>
             </button>
-            <button type="button" class="btn btn-default">
+            <button type="button" class="btn btn-sm btn-default">
               <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&amp;start=<{$extgalleryStart}>&amp;sortby=photo_title&amp;orderby=ASC"
                  title="<{$smarty.const._MD_EXTGALLERY_SORTNAMEASC}>">
                   <span class="glyphicon glyphicon-chevron-up"></span>
@@ -62,7 +62,7 @@ $(function() {
                   <span class="glyphicon glyphicon-chevron-down"></span>
               </a>
             </button>
-            <button type="button" class="btn btn-default">
+            <button type="button" class="btn btn-sm btn-default">
               <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&amp;start=<{$extgalleryStart}>&amp;sortby=photo_hits&amp;orderby=DESC"
                  title="<{$smarty.const._MD_EXTGALLERY_SORTHITSDESC}>">
                   <span class="glyphicon glyphicon-chevron-up"></span>
@@ -73,7 +73,7 @@ $(function() {
                   <span class="glyphicon glyphicon-chevron-down"></span>
               </a>
             </button>
-            <button type="button" class="btn btn-default">
+            <button type="button" class="btn btn-sm btn-default">
               <a href="<{xoAppUrl modules/extgallery/}>public-album.php?id=<{$extgalleryID}>&amp;start=<{$extgalleryStart}>&amp;sortby=photo_rating&amp;orderby=DESC"
                  title="<{$smarty.const._MD_EXTGALLERY_SORTNOTEDESC}>">
                   <span class="glyphicon glyphicon-chevron-up"></span>

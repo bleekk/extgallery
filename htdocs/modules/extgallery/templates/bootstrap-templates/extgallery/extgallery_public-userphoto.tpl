@@ -1,9 +1,13 @@
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a></li>
+      <li><a href="<{xoAppUrl modules/extgallery/}>public-useralbum.php?id=<{$photo.user.uid}>"><{$lang.albumName}></a></li>
+      <li><{$photo.photo_title}></li>
+    </ol>
+  </div>
+</div>
 <div class="extgallery">
-    <a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a> <img
-            src="assets/images/breadcrumb-link.gif" alt="BreadCrumb"/> <a
-            href="<{xoAppUrl modules/extgallery/}>public-useralbum.php?id=<{$photo.user.uid}>"><{$lang.albumName}></a>
-    <img src="assets/images/breadcrumb-link.gif"
-         alt="BreadCrumb"/> <{$photo.photo_title}>
     <table id="photoNav" class="outer">
         <tr>
             <td id="photoNavLeft" class="even"><{if $prevId != 0}><a
@@ -30,12 +34,12 @@
 
     <{if $disp_ph_title == 1 }>
         <!-- Start Photo Title -->
-        <div class="photoTitle"><h2><{$photo.photo_title}></h2></div>
+        <div class="photoTitle"><h4><{$photo.photo_title}></h4></div>
         <!-- End Photo Title -->
     <{/if}>
 
     <!-- Start Photo desc -->
-    <div class="photoDesc"><{$photo.photo_desc}></div>
+    <p style="text-align: center"><{$photo.photo_desc}></p>
     <!-- End Photo desc -->
 
     <{if $enableExtra}>
