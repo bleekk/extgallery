@@ -97,11 +97,15 @@ if (isset($GLOBALS['xoopsModule']) && is_object($GLOBALS['xoopsModule'])
     $permHandler = ExtgalleryPublicPermHandler::getInstance();
     if (count($permHandler->getAuthorizedPublicCat($GLOBALS['xoopsUser'], 'public_upload')) > 0) {
         $modversion['sub'][1]['name'] = _MI_EXTGALLERY_PUBLIC_UPLOAD;
+
+       /* bleekk
         if ($GLOBALS['xoopsModuleConfig']['use_extended_upload'] === 'html') {
             $modversion['sub'][1]['url'] = 'public-upload.php';
         } else {
             $modversion['sub'][1]['url'] = 'public-upload-extended.php';
         }
+       */
+       $modversion['sub'][1]['url'] = 'public-upload.php';
     }
 }
 
@@ -171,6 +175,8 @@ $modversion['config'][$i]['options']     = array(
     _MI_EXTGALLERY_ASC  => 'ASC'
 );
 $modversion['config'][$i]['default']     = 'DESC';
+
+/* bleekk
 ++$i;
 $modversion['config'][$i]['name']        = 'use_extended_upload';
 $modversion['config'][$i]['title']       = '_MI_EXTGAL_EXT_UPLOAD';
@@ -182,6 +188,8 @@ $modversion['config'][$i]['options']     = array(
     _MI_EXTGALLERY_EXTENDED => 'applet',
     _MI_EXTGALLERY_STANDARD => 'html'
 );
+*/
+
 ++$i;
 $modversion['config'][$i]['name']        = 'enable_jquery';
 $modversion['config'][$i]['title']       = '_MI_EXTGAL_JQUERY';
@@ -230,6 +238,8 @@ $modversion['config'][$i]['description'] = '';
 $modversion['config'][$i]['formtype']    = 'line_break';
 $modversion['config'][$i]['valuetype']   = 'textbox';
 $modversion['config'][$i]['default']     = 'head';
+
+/* bleekk
 ++$i;
 $modversion['config'][$i]['name']        = 'use_ajax_effects';
 $modversion['config'][$i]['title']       = '_MI_EXTGAL_DISP_TYPE';
@@ -245,6 +255,7 @@ $modversion['config'][$i]['options']     = array(
     _MI_EXTGAL_AJAX_PRETTPHOTO => 'prettyphoto'
 );
 $modversion['config'][$i]['default']     = 'none';
+*/
 ++$i;
 $modversion['config'][$i]['name']        = 'nb_column';
 $modversion['config'][$i]['title']       = '_MI_EXTGAL_NB_COLUMN';
@@ -979,6 +990,8 @@ $modversion['config'][$i]['default']     = 0;
 /* end added by Goffy */
 
 // hidden effects for album
+
+/* bleekk 
 ++$i;
 $modversion['config'][$i]['name']        = 'album_tooltip_width';
 $modversion['config'][$i]['title']       = '_MI_EXTGAL_HIDDEN_FIELD';
@@ -1091,6 +1104,7 @@ $modversion['config'][$i]['description'] = '';
 $modversion['config'][$i]['formtype']    = 'hidden';
 $modversion['config'][$i]['valuetype']   = 'text';
 $modversion['config'][$i]['default']     = 'true';
+*/
 
 // Templates
 $modversion['templates'] = array(

@@ -13,8 +13,8 @@
 
 <div id="xoopsgrid" class="row">
     <{foreachq item=child from=$cats}>
-    <div class="col-xs-6 col-sm-4 col-md-4 xoops-gallery-thumb">
-      <div class="panel panel-default">
+    <div class="col-xs-6 col-sm-4 col-md-4 ">
+      <div class="panel panel-default" id="extgallery">
         <{if $disp_cat_img == 1 }>
             <{if $child.cat_imgurl != "" }>
                 <{if $child.cat_isalbum}>
@@ -83,7 +83,7 @@
                 <{$child.cat_name}>
             </a><span class="label label-success" style="font-size:60%; font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span>
             </h4>
-            <p><{$child.cat_desc}></p>
+            <p class="catDesc"><{$child.cat_desc}></p>
           </div>
         <{/if}>
         <!--

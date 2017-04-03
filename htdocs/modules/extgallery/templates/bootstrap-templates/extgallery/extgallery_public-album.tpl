@@ -1,22 +1,3 @@
-<script type="text/javascript">
-<{if $use_ajax_effects == 'lightbox'}>
-$(function() {
-   $('a[rel*=lightbox]').lightBox({
-	overlayOpacity: 0.6,
-  imageBlank: '<{xoAppUrl modules/extgallery/assets/images/lightbox/}>lightbox-blank.gif',
-	imageLoading: '<{xoAppUrl modules/extgallery/assets/images/lightbox/}>lightbox-ico-loading.gif',
-	imageBtnClose: '<{xoAppUrl modules/extgallery/assets/images/lightbox/}>lightbox-btn-close.gif',
-	imageBtnPrev: '<{xoAppUrl modules/extgallery/assets/images/lightbox/}>lightbox-btn-prev.gif',
-	imageBtnNext: '<{xoAppUrl modules/extgallery/assets/images/lightbox/}>lightbox-btn-next.gif',
-	containerResizeSpeed: 350,
-	txtImage: 'Picture',
-	txtOf: 'de'
-   });
-});
-<{/if}>
-
-</script>
-<{$use_ajax_effects}>
 <div class="extGalleryAlbum">
     <div class="row">
         <div class="col-md-12">
@@ -103,27 +84,16 @@ $(function() {
                   <div class="panel-thumbnail" style="overflow: hidden;">
                     <{if $photos[photo].photo_serveur && $photos[photo].photo_name}>
                         <a href="<{xoAppUrl modules/extgallery/}>public-photo.php?photoId=<{$photos[photo].photo_id}>" title="<{$photos[photo].photo_title}>">
-                            <img src="<{$photos[photo].photo_serveur}>thumb_<{$photos[photo].photo_name}>" alt="<{$photos[photo].photo_title}>">
+                            <img src="<{$photos[photo].photo_serveur}>thumb_<{$photos[photo].photo_name}>" alt="<{$photos[photo].photo_title}>" 
+                                class="img-responsive" 
+                                alt="<{$photos[photo].photo_title}>" rel="#photo<{$photos[photo].photo_id}>" >
                         </a>
                     <{elseif $photos[photo].photo_name}>
-
-                      <{if $use_ajax_effects == 'none'}>
+                     
                       <a href="<{xoAppUrl modules/extgallery/}>public-photo.php?photoId=<{$photos[photo].photo_id}>" title="<{$photos[photo].photo_title}>">
-                      <{elseif $use_ajax_effects == 'lightbox'}>
-                      <a href="<{$xoops_url}>/uploads/extgallery/public-photo/medium/<{$photos[photo].photo_name}>" rel="lightbox" data-lightbox="image-<{$photos[photo].photo_id}>" data-title="<{$photos[photo].photo_title}>">
-                      <{elseif $use_ajax_effects == 'tooltip'}>
-                      <a href="<{xoAppUrl modules/extgallery/}>public-photo.php?photoId=<{$photos[photo].photo_id}>"
-                        rel="<{$xoops_url}>/uploads/extgallery/public-photo/medium/<{$photos[photo].photo_name}>" class="screenshot" title="<{$photos[photo].photo_title}>">
-                      <{elseif $use_ajax_effects == 'overlay'}>
-                      <div class="simple_overlay" id="photo<{$photos[photo].photo_id}>">
-                        <a href="<{$xoops_url}>/uploads/extgallery/public-photo/medium/<{$photos[photo].photo_name}>" >
-                      </div>
-                      <{else}>
-                      <a href="<{xoAppUrl modules/extgallery/}>public-photo.php?photoId=<{$photos[photo].photo_id}>" title="<{$photos[photo].photo_title}>">
-                      <{/if}>
-
-                            <img src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$photos[photo].photo_name}>"
-                                 alt="<{$photos[photo].photo_title}>" rel="#photo<{$photos[photo].photo_id}>">
+                            <img src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$photos[photo].photo_name}>" 
+                                class="img-responsive" 
+                                 alt="<{$photos[photo].photo_title}>" rel="#photo<{$photos[photo].photo_id}>" >
                         </a>
                     <{/if}>
 
@@ -132,7 +102,7 @@ $(function() {
                     <h4><{$photos[photo].photo_title}></h4>
 
                     <{if $enableRating || $enable_show_comments || $enable_photo_hits || $enable_date || $enable_submitter_lnk || $xoops_isadmin}>
-                      <ul class="list-unstyled">
+                      <ul class="list-unstyled catDesc">
 
                         <{if $enable_show_comments && $enable_photo_hits}>
                             <li><{$photos[photo].photo_comment}> <{$lang.comments}> | <{$photos[photo].photo_hits}> <{$lang.hits}></li>
@@ -197,9 +167,4 @@ $(function() {
         </a>
     </div>
 <{/if}>
-<script>
-  $(document).ready(function() {
-      $("img[rel]").overlay();
-    });
-</script>
 <{include file='db:system_notification_select.tpl'}>

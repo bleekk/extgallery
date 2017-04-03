@@ -62,11 +62,14 @@ if (isset($GLOBALS['xoopsModule']) && $GLOBALS['xoopsModule']->getVar('dirname')
     $permHandler = ExtgalleryPublicPermHandler::getInstance();
     if (count($permHandler->getAuthorizedPublicCat($GLOBALS['xoopsUser'], 'public_upload')) > 0) {
         $uploadlinkname = _MD_EXTGALLERY_PUBLIC_UPLOAD;
+        /*
         if ($GLOBALS['xoopsModuleConfig']['use_extended_upload'] === 'html') {
             $uploadurl = 'public-upload.php';
         } else {
             $uploadurl = 'public-upload-extended.php';
         }
+        */
+        $uploadurl = 'public-upload.php';
     }
 }
 

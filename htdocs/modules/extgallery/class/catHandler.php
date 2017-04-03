@@ -590,7 +590,7 @@ class ExtgalleryCatHandler extends ExtgalleryPersistableObjectHandler
      * @return Criteria
      */
     public function &getCatRestrictCriteria($permType = 'public_access')
-    {
+    {   
         $permHandler       = $this->_getPermHandler();
         $allowedCategories = $permHandler->getAuthorizedPublicCat($GLOBALS['xoopsUser'], $permType);
 

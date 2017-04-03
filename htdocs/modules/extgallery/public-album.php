@@ -114,8 +114,9 @@ if (null === $catObj) {
     exit;
 }
 
-$ajaxeffect = $xoopsModuleConfig['use_ajax_effects'];
-$xoopsTpl->assign('use_ajax_effects', $ajaxeffect);
+// bleekk
+//$ajaxeffect = $xoopsModuleConfig['use_ajax_effects'];
+//$xoopsTpl->assign('use_ajax_effects', $ajaxeffect);
 
 $cat = $catHandler->objectToArray($catObj);
 $xoopsTpl->assign('cat', $cat);
@@ -161,9 +162,13 @@ if (isset($catObj)) {
 }
 
 $jquery = $xoopsModuleConfig['enable_jquery'];
-$xoopsTpl->assign('jquery', $jquery);
-if ($jquery == 1 && $ajaxeffect !== 'none') {
+if ($jquery == 1){
     $xoTheme->addScript('browse.php?Frameworks/jquery/jquery.js');
+}
+$xoopsTpl->assign('jquery', $jquery);
+//if ($jquery == 1 && $ajaxeffect !== 'none') {
+ /* bleekk   
+if ($ajaxeffect !== 'none') {
     switch ($ajaxeffect) {
         case 'lightbox':
             $xoTheme->addScript('browse.php?Frameworks/jquery/plugins/jquery.lightbox.js');
@@ -193,6 +198,7 @@ if ($jquery == 1 && $ajaxeffect !== 'none') {
             break;
     }
 }
+*/
 
 $rel                 = 'alternate';
 $attributes['rel']   = $rel;
@@ -242,27 +248,32 @@ $xoopsTpl->assign('enable_date', $xoopsModuleConfig['enable_date']);
 $xoopsTpl->assign('show_rss', $xoopsModuleConfig['show_rss']);
 
 //for tooltip
-$xoopsTpl->assign('album_tooltip_borderwidth', $xoopsModuleConfig['album_tooltip_borderwidth']);
-$xoopsTpl->assign('album_tooltip_bordercolor', $xoopsModuleConfig['album_tooltip_bordercolor']);
-$xoopsTpl->assign('album_tooltip_width', $xoopsModuleConfig['album_tooltip_width']);
+//bleekk
+// $xoopsTpl->assign('album_tooltip_borderwidth', $xoopsModuleConfig['album_tooltip_borderwidth']);
+// $xoopsTpl->assign('album_tooltip_bordercolor', $xoopsModuleConfig['album_tooltip_bordercolor']);
+// $xoopsTpl->assign('album_tooltip_width', $xoopsModuleConfig['album_tooltip_width']);
 
 //for overlay
-$xoopsTpl->assign('album_overlay_bg', $xoopsModuleConfig['album_overlay_bg']);
-$xoopsTpl->assign('album_overlay_width', $xoopsModuleConfig['album_overlay_width']);
-$xoopsTpl->assign('album_overlay_height', $xoopsModuleConfig['album_overlay_height']);
+// bleekk
+// $xoopsTpl->assign('album_overlay_bg', $xoopsModuleConfig['album_overlay_bg']);
+// $xoopsTpl->assign('album_overlay_width', $xoopsModuleConfig['album_overlay_width']);
+// $xoopsTpl->assign('album_overlay_height', $xoopsModuleConfig['album_overlay_height']);
 
 //for fancybox
-$xoopsTpl->assign('album_fancybox_color', $xoopsModuleConfig['album_fancybox_color']);
-$xoopsTpl->assign('album_fancybox_opacity', $xoopsModuleConfig['album_fancybox_opacity']);
-$xoopsTpl->assign('album_fancybox_tin', $xoopsModuleConfig['album_fancybox_tin']);
-$xoopsTpl->assign('album_fancybox_tout', $xoopsModuleConfig['album_fancybox_tout']);
-$xoopsTpl->assign('album_fancybox_title', $xoopsModuleConfig['album_fancybox_title']);
-$xoopsTpl->assign('album_fancybox_showtype', $xoopsModuleConfig['album_fancybox_showtype']);
+// bleekk
+// $xoopsTpl->assign('album_fancybox_color', $xoopsModuleConfig['album_fancybox_color']);
+// $xoopsTpl->assign('album_fancybox_opacity', $xoopsModuleConfig['album_fancybox_opacity']);
+// $xoopsTpl->assign('album_fancybox_tin', $xoopsModuleConfig['album_fancybox_tin']);
+// $xoopsTpl->assign('album_fancybox_tout', $xoopsModuleConfig['album_fancybox_tout']);
+// $xoopsTpl->assign('album_fancybox_title', $xoopsModuleConfig['album_fancybox_title']);
+// $xoopsTpl->assign('album_fancybox_showtype', $xoopsModuleConfig['album_fancybox_showtype']);
 
 //for prettyphoto
-$xoopsTpl->assign('album_prettyphoto_speed', $xoopsModuleConfig['album_prettyphoto_speed']);
-$xoopsTpl->assign('album_prettyphoto_theme', $xoopsModuleConfig['album_prettyphoto_theme']);
-$xoopsTpl->assign('album_prettyphoto_slidspeed', $xoopsModuleConfig['album_prettyphoto_slidspe']);
-$xoopsTpl->assign('album_prettyphoto_autoplay', $xoopsModuleConfig['album_prettyphoto_autopla']);
+// bleekk
+// $xoopsTpl->assign('album_prettyphoto_speed', $xoopsModuleConfig['album_prettyphoto_speed']);
+// $xoopsTpl->assign('album_prettyphoto_theme', $xoopsModuleConfig['album_prettyphoto_theme']);
+// $xoopsTpl->assign('album_prettyphoto_slidspeed', $xoopsModuleConfig['album_prettyphoto_slidspe']);
+// $xoopsTpl->assign('album_prettyphoto_autoplay', $xoopsModuleConfig['album_prettyphoto_autopla']);
+
 
 include XOOPS_ROOT_PATH . '/footer.php';
