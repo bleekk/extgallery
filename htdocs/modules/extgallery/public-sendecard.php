@@ -41,6 +41,7 @@ if (!$permHandler->isAllowed($xoopsUser, 'public_ecard', $photo->getVar('cat_id'
     redirect_header('index.php', 3, _MD_EXTGALLERY_NOPERM);
 }
 
+
 switch ($step) {
 
     case 'send':
@@ -132,6 +133,7 @@ switch ($step) {
             'from' => _MD_EXTGALLERY_FROM
         );
         $xoopsTpl->assign('lang', $lang);
+        $xoopsTpl->assign('extgalleryName', $xoopsModule->getVar('name'));
 
         include XOOPS_ROOT_PATH . '/footer.php';
 

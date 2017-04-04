@@ -1,4 +1,15 @@
-#extgallery .catDesc{font-size: 90%}
+.extgallery .catDesc h4{
+	text-align: center;
+	margin: 0px 0 10px 0
+}
+.extgallery .catDesc .label-outer{
+	text-align: center;
+	margin-bottom: 10px;
+}
+.extgallery .catDesc .label{padding: 4px 7px;}
+.extgallery .catDesc p{font-size: 90%; text-align: center; margin: 0}
+
+-----------
 #extgallery table.outer {
     margin-top: 10px;
 }

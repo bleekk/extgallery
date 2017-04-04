@@ -1,3 +1,12 @@
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a></li>
+      <li><{$send_ecard.title}></li>
+    </ol>
+  </div>
+</div>
+
 <form class="form-horizontal" role="form" id="<{$send_ecard.name}>" action="<{$send_ecard.action}>"
       method="<{$send_ecard.method}>" <{$send_ecard.extra}>>
     <h3 class="gallerytitle"><{$send_ecard.title}></h3>

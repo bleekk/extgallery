@@ -14,7 +14,7 @@
 <div id="xoopsgrid" class="row">
     <{foreachq item=child from=$cats}>
     <div class="col-xs-6 col-sm-4 col-md-4 ">
-      <div class="panel panel-default" id="extgallery">
+      <div class="extgallery panel panel-default">
         <{if $disp_cat_img == 1 }>
             <{if $child.cat_imgurl != "" }>
                 <{if $child.cat_isalbum}>
@@ -68,22 +68,29 @@
         <{/if}>
 
         <{if $child.cat_isalbum}>
-          <div class="panel-body">
+          <div class="panel-body catDesc">
             <h4>
             <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-<{$display_type}>.php?id=<{$child.cat_id}>">
                 <{$child.cat_name}></strong>
-            </a><span class="label label-success" style="font-size:60%; font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span></h4>
+            </a>
+            </h4>
+            <div class="label-outer">
+            <span class="label label-info" style="font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span>
+            </div>
             <p><{$child.cat_desc}></p>
           </div>
 
         <{else}>
-          <div class="panel-body">
+          <div class="panel-body catDesc">
             <h4>
             <a title="<{$child.cat_name}>" href="<{xoAppUrl modules/extgallery/}>public-categories.php?id=<{$child.cat_id}>">
                 <{$child.cat_name}>
-            </a><span class="label label-success" style="font-size:60%; font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span>
+            </a>
             </h4>
-            <p class="catDesc"><{$child.cat_desc}></p>
+           <div class="label-outer">
+            <span class="label label-info" style="font-weight: normal"><{$child.cat_nb_photo}> <{$lang.nbPhotos}></span>
+           </div>
+            <p><{$child.cat_desc}></p>
           </div>
         <{/if}>
         <!--
