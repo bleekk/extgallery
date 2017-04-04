@@ -26,6 +26,11 @@ if (isset($_POST['step'])) {
     $step = 'default';
 }
 
+// edit by Alfred
+if ( !is_object($xoopsUser) ) { 
+  $xoopsUser = new xoopsUser();
+}
+
 $permHandler = ExtgalleryPublicPermHandler::getInstance();
 if (count($permHandler->getAuthorizedPublicCat($xoopsUser, 'public_upload')) < 1) {
     redirect_header('index.php', 3, _MD_EXTGALLERY_NOPERM);

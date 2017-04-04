@@ -113,7 +113,7 @@ if ($k != $xoopsModuleConfig['nb_column']) {
 
 // HACK DATE BY MAGE : DISPLAY PUBLICATION DATE
 foreach (array_keys($photos) as $i) {
-    if (isset($photos[$i]['photo_date'])) {
+    if (isset($photos[$i]['photo_date']) && $photos[$i]['photo_date'] >0) {
         $photos[$i]['photo_date'] = date(_SHORTDATESTRING, $photos[$i]['photo_date']);
     }
 }

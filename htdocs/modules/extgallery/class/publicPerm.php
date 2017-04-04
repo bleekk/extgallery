@@ -42,7 +42,9 @@ class ExtgalleryPublicPermHandler
      */
     public function _getUserGroup($user)
     {
-        if (is_a($user, 'XoopsUser')) {
+        //if (is_a($user, 'XoopsUser') && $user->getVar('uid')>0) {
+        // edit by Alfred
+        if (is_a($user, 'XoopsUser') && $user->getVar('uid')>0) {
             return $user->getGroups();
         } else {
             return XOOPS_GROUP_ANONYMOUS;
@@ -59,6 +61,8 @@ class ExtgalleryPublicPermHandler
     {
         static $authorizedCat;
         $userId = $user ? $user->getVar('uid') : 0;
+        // edit by Alfred
+        $userId = intval($userId);
         if (!isset($authorizedCat[$perm][$userId])) {
             /** @var XoopsGroupPermHandler $groupPermHandler */
             $groupPermHandler = xoops_getHandler('groupperm');
