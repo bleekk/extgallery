@@ -33,8 +33,8 @@ if (!isset($_GET['start'])) {
     $start = (int)$_GET['start'];
 }
 
-$ajaxeffect = $xoopsModuleConfig['use_ajax_effects'];
-$xoopsTpl->assign('use_ajax_effects', $ajaxeffect);
+//$ajaxeffect = $xoopsModuleConfig['use_ajax_effects'];
+//$xoopsTpl->assign('use_ajax_effects', $ajaxeffect);
 
 //HACK BLUETEEN TO SORT PHOTOS BY USERS
 //photo_date - photo_title - photo_hits - photo_rating
@@ -105,11 +105,14 @@ $photoHandler = xoops_getModuleHandler('publicphoto', 'extgallery');
 
 $photos = $photoHandler->objectToArray($photoHandler->getUserAlbumPhotoPage($userId, $start, $sortby, $orderby), array('uid'));
 $k      = $xoopsModuleConfig['nb_column'] - (count($photos) % $xoopsModuleConfig['nb_column']);
+
+/* Bleekk: verstehe nicht wozu das gut sein soll???
 if ($k != $xoopsModuleConfig['nb_column']) {
-    for ($i = 0; $i < $k; ++$i) {
+    for ($i = 1; $i < $k; ++$i) {
         $photos[] = array();
     }
 }
+*/
 
 // HACK DATE BY MAGE : DISPLAY PUBLICATION DATE
 foreach (array_keys($photos) as $i) {
