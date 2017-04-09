@@ -16,10 +16,10 @@
  */
 
 include __DIR__ . '/header.php';
-$moduleDirName = basename(__DIR__);
 
 $GLOBALS['xoopsOption']['template_main'] = $moduleDirName . '_index.tpl';
 include XOOPS_ROOT_PATH . '/header.php';
+if ($xoopsUser && $xoopsUser->uid() < 1) unset($xoopsUser);
 
 /** @var ExtgalleryPublicCatHandler $catHandler */
 $catHandler = xoops_getModuleHandler('publiccat', $moduleDirName);
@@ -50,7 +50,7 @@ $xoopsTpl->assign('thumb_heigth', $xoopsModuleConfig['thumb_heigth']);
 $xoopsTpl->assign('show_rss', $xoopsModuleConfig['show_rss']);
 
 // pk ------------------- add upload and view-my-album links to main page
-
+$albumlinkname = $albumurl = $uploadlinkname = $uploadurl = '';
 if (isset($GLOBALS['xoopsModule']) && $GLOBALS['xoopsModule']->getVar('dirname') == $moduleDirName) {
     if ($GLOBALS['xoopsUser'] != null) {
         $albumlinkname = _MD_EXTGALLERY_USERALBUM;
